@@ -9,7 +9,7 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://storebeta-postgresql:5432/storeBeta
       - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
     ports:
-      - 8080:8080
+      - :8100::8100
   storebeta-postgresql:
     extends:
       file: postgresql.yml

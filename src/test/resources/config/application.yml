@@ -18,7 +18,7 @@ spring:
     name: storeBeta
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:storeBeta;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:file:./target/h2db/db/storebeta;DB_CLOSE_DELAY=-1
     name:
     username:
     password:
@@ -28,7 +28,7 @@ spring:
     database-platform: io.github.jhipster.domain.util.FixedH2Dialect
     database: H2
     open-in-view: false
-    show-sql: false
+    show-sql: true
     hibernate:
       ddl-auto: none
       naming:
@@ -91,7 +91,7 @@ jhipster:
       queue-size: 512
   mail:
     from: test@localhost
-    base-url: http://127.0.0.1:8080
+    base-url: http://127.0.0.1::8100
   security:
     authentication:
       jwt:
